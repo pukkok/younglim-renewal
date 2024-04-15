@@ -1,0 +1,256 @@
+.section3{
+    padding: 5vh 0;
+    /* background-color: #ecebe7; */
+}
+
+.tab-box{
+    display: flex;
+    gap: 24px;
+    height: fit-content;
+    margin-bottom: 100px;
+    position: sticky;
+    top: 70px;
+    z-index: 10;
+}
+.tab-box h3{
+    box-sizing: border-box;
+    padding: 2px 0;
+    font-weight: 300;
+    cursor: pointer;
+    border-bottom: solid 2px transparent;
+}
+
+.tab-box h3.on{
+    font-weight: 500;
+    border-bottom: solid 2px black;
+}
+.tab-box h3:hover{
+    color : #999;
+    border-bottom: solid 2px #999;
+}
+
+.section3 .img-box{
+    width: 100%;
+    min-height: 170vh;
+    position: relative;
+    margin-bottom: 20vh;
+}
+
+.section3 .img-box img{
+    max-height: 70vh;
+}
+
+.special{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.special h1{
+    margin: 0;
+    padding: 0;
+    font-size: 180px;
+}
+
+.section3 .content-box{
+    position: absolute;
+    transition: 1s;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.section3 .text-box{
+    box-sizing: border-box;
+    padding: 0 5%;
+    color: #0e1111;
+    width: 90%;
+}
+
+.section3 .img-box .box1 h2{
+    margin: 20px 0;
+    font-weight: 700;
+}
+.section3 .img-box .box1 h4{
+    line-height: 1.7rem;
+    margin: 20px 0;
+}
+
+.section3 .img-box .box1{
+    height: fit-content;
+    background-color: #ecebe7;
+    padding-bottom: 20px;
+}
+
+.section3 .img-box.effect .box1,
+.section3 .img-box.effect .box2,
+.section3 .img-box.effect .box3{
+    animation: flash 1.4s forwards;
+}
+
+.section3 .img-box.modern .box1{
+    width: 60%;
+    top: 0;
+    left: 40%;
+}
+
+.section3 .img-box.modern .box2{
+    width: 33%;
+    top: 20%;
+    left: 0;
+}
+
+.section3 .img-box.modern .box3{
+    width: 40%;
+    top: 60%;
+    left: 40%;
+}
+
+.section3 .img-box.natural .box1{
+    width: 50%;
+    top: 5%;
+    left: 0;
+}
+
+.section3 .img-box.natural .box2{
+    width: 30%;
+    top: 65%;
+    left: 35%;
+}
+
+.section3 .img-box.natural .box3{
+    width: 40%;
+    top: 0%;
+    left: 60%;
+}
+
+.section3 .img-box.classic .box1{
+    width: 60%;
+    top: 15%;
+    left: 40%;
+}
+
+.section3 .img-box.classic .box2{
+    width: 25%;
+    left: 10%;
+    top: 55%;
+    
+}
+
+.section3 .img-box.classic .box3{
+    width: 30%;
+    top: 0%;
+    left: 0;
+}
+
+.section3 .img-box.unique .box1{
+    width: 70%;
+    top: 0%;
+    left: 30%; 
+}
+
+.section3 .img-box.unique .box2{
+    width: 25%;
+    left: 0%;
+    top: 10%;
+}
+
+.section3 .img-box.unique .box3{
+    width: 30%;
+    top: 60%;
+    left: 45%;
+}
+
+
+@keyframes flash{
+    0% {
+        opacity: .6;
+    }
+    20% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    90%{
+        opacity: 1;
+    }
+    
+}
+
+
+.store{
+   background-color:#f6f5f3 ; 
+}
+
+.section3 .bottom{
+    background-color:#f6f5f3 ;
+    padding: 8vh 0;
+
+}
+.section3 .bottom .text-box,
+.section3 .bottom .video-box{
+    width: 100%;
+    
+}
+
+.section3 .bottom .text-box{
+    text-align: center;
+}
+
+.section3 .bottom .text-box p{
+    padding-top: 16px;
+}
+.section3 .bottom .text-box button{
+    all: unset;
+    padding-top: 12px;
+    letter-spacing: -1.5px;
+    cursor: pointer;
+}
+.section3 .bottom .text-box button h5{
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    padding-bottom: 1px;
+    border-bottom: solid 1px #333;
+}
+.section3 .bottom .text-box button h5::after{
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url(./imgs/icons/icon-arrow-contact.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.section3 .video-box{
+    margin-top: 48px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 10%;
+}
+
+.video-box .thumb-nail{
+    position: absolute;
+    border-radius: 16px;
+    background-image: url(./imgs/main-img-play.jpg);
+    background-size: cover;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.video-box .thumb-nail button{
+    all: unset;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(./imgs/icons/icon-button-play.png);
+    background-size: cover;
+}

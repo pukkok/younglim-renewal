@@ -1,0 +1,45 @@
+.magazine{
+    width: 100vw;
+}
+
+.magazine .m-header{
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 0 10px;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.magazine .m-header button{
+    all: unset;
+    margin-left: auto;
+    border-bottom: solid 1px gray;
+}
+
+.magazine .m-header h1{
+    font-weight: 500;
+}
+
+.magazine .card-container{
+    margin-top: 25px;
+    display: flex;
+    gap: 16px;
+}
+
+.magazine .card-container .card .img-box{
+    min-width: 400px;
+    min-height: 250px;
+    border-radius: 16px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.magazine .card-container .card .text-box{
+    box-sizing: border-box;
+    padding: 0 8px;
+}
+
+.magazine .card-container .card .text-box h5{
+    padding-top: 5px;
+}

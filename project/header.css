@@ -1,0 +1,208 @@
+
+header{
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  color: white;
+  width: 100vw;
+  z-index: 100;
+  transition: .2s;
+}
+
+header nav {
+  height: 70px;
+  overflow:hidden;
+  transition: .2s;
+}
+
+/* white모드, hover시 */
+nav.white-mode,
+nav:hover{
+  background-color: white;
+  color: #0e1111;
+}
+nav.white-mode .logo-box .logo,
+nav:hover .logo-box .logo{
+  background-image: url(./imgs/icon-younglim-logo.png);
+}
+nav.white-mode .depth1-box .user-box ul li .search,
+nav:hover .depth1-box .user-box ul li .search{
+  background-image: url(./imgs/icons/icon-gnb-search.png);
+}
+nav.white-mode .depth1-box .user-box ul li .like,
+nav:hover .depth1-box .user-box ul li .like{
+  background-image: url(./imgs/icons/icon-gnb-like.png);
+}
+nav.white-mode .depth1-box .user-box ul li .login,
+nav:hover .depth1-box .user-box ul li .login{
+  background-image: url(./imgs/icons/icon-gnb-login.png);
+}
+nav.white-mode .depth1-box .user-box ul li .menu,
+nav:hover .depth1-box .user-box ul li .menu{
+  background-image: url(./imgs/icons/icon-gnb-menu.png);
+}
+
+nav:hover .depth1-box .user-box ul li .search:hover,
+nav:hover .depth1-box .user-box ul li .like:hover,
+nav:hover .depth1-box .user-box ul li .login:hover{
+  filter: invert(.5);
+}
+
+.depth1-box{
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  height: 70px;
+  font-weight: bold;
+}
+
+.depth1-box .logo-box{
+  width: 142px;
+  height: 30px;
+}
+
+.depth1-box .logo-box .logo{
+  width: 100%;
+  height: 100%;
+  background-image: url(./imgs/icon-younglim-logo-white.png);
+  background-size: cover;
+}
+
+.depth1-box .depth1 ul li{
+  padding-bottom: 2px;
+  border-bottom: solid 2px transparent;
+}
+
+.depth1-box .depth1 ul li.on{
+  border-bottom: solid 2px gray;
+}
+
+
+.depth1-box .depth1 ul,
+.depth1-box .user-box ul{
+  display: flex;
+  gap: 16px;
+}
+
+.depth1-box .user-box{
+  margin-left: auto;
+}
+
+.depth1-box .user-box ul li{
+  width: 30px;
+  height: 30px;
+}
+.depth1-box .user-box ul li div{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.depth1-box .user-box ul li .search{
+  background-image: url(./imgs/icons/icon-gnb-search-white.png);
+}
+.depth1-box .user-box ul li .like{
+  background-image: url(./imgs/icons/icon-gnb-like-white.png);
+}
+.depth1-box .user-box ul li .login{
+  background-image: url(./imgs/icons/icon-gnb-login-white.png);
+}
+.depth1-box .user-box ul li .menu{
+  background-image: url(./imgs/icons/icon-gnb-menu-white.png);
+}
+.depth1-box .user-box ul li:nth-last-child(1){
+  display: none;
+}
+
+.depth2-box{
+  box-sizing: border-box;
+  min-height: 350px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  position: relative;
+  transition: .5s;
+}
+
+.depth2-box .depth2{
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.depth2-box .depth2 .name{
+  width: 142px;
+  color: var(--brand-color-red);
+}
+.depth2-box .depth2 .name h5{
+  font-weight: 700;
+}
+
+.depth2-box ul li:hover{
+  font-weight: bold;
+}
+
+.depth2 ul{
+  width: 180px;
+  min-height: 250px;
+  border-left: solid 1px #999;
+  height: fit-content;
+  padding: 0 16px;
+}
+
+.depth2 ul li{
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.depth2 ul .product-item.on{
+  color: #0e1111;
+  font-weight: bold;
+}
+.depth2 ul .product-item.on::after{
+  margin-left: auto;
+  content: "\e941";
+  font-family: 'Material Symbols Outlined';
+  position: relative;
+  opacity: 0;
+  animation: move-right .5s forwards;
+}
+
+@keyframes move-right {
+  0%{
+      opacity: 0;
+      left: -16px;
+  }
+  100%{
+      opacity: 1;
+      left: 0px;
+  }
+}
+
+.depth2-box .container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.depth2-box .depth3 {
+  min-width: 160px;
+  min-height: 250px;
+  height: fit-content;
+  border-left: solid 1px #999;
+  padding: 0 16px;
+}
+
+.depth2-box .depth3 ul:not(:nth-child(1)){
+  padding-top: 10px;
+}
+
+.depth2-box .depth3 .main{
+  padding-top: 10px;
+}
+
+.depth2-box .depth3 .list{
+  padding-top: 10px;
+  padding-left: 10px;
+}

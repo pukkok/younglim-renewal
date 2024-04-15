@@ -1,0 +1,49 @@
+.section5{
+    width: 100vw;
+    height: auto;
+}
+
+.section5 .card-container{
+    border: solid 1px #d3d3d3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 60vh);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.section5 .card-container div{
+    overflow: hidden;
+}
+
+.section5 .card-container .img-box img{
+    width: 100%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section5 .card-container .text-box{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section5 .card-container .text-box h1{
+    font-size: 32px;
+}
+
+.section5 .card-container .text-box p{
+    font-size: 16px;
+}
+
+.section5 .card-container .text-box button{
+    all: unset;
+    font-size: 14px;
+}
+
+.section5 .card-container .text-box button::after{
+    content: ">" ;
+    padding-left: 8px;
+}

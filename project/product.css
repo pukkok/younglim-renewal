@@ -1,0 +1,288 @@
+.product{
+    width: 100vw;
+}
+
+.product-bg{
+    width: 100%;
+    height: 70vh;
+    background-image: url(./imgs/product/kitchen/bg_kitchen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10vh;
+}
+.product .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* select */
+.select-box{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.product-select-btn{
+    all: unset;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    width: 210px;
+    height: 40px;
+    border-bottom: solid 1px gray;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.product-select-btn::after{
+    margin-left: auto;
+    content: "\e986";
+    font-family: "Material Symbols Outlined";
+    transform: rotate(-180deg);
+    transition: .2s;
+}
+.product-select-btn.on::after{
+    transform: rotate(0deg);
+}
+/* select option */
+.product-select-option{
+    position: absolute;
+    display: none;
+    background-color: white;
+    z-index: 10;
+    padding-top: 0px;
+    top: 60px;
+}
+
+.product-select-option li{
+    box-sizing: border-box;
+    width: 210px;
+    background-color: white;
+    border: solid 1px gray;
+    border-bottom: none;
+    padding: 10px;
+}
+.product-select-option li:nth-last-child(1){
+    border-bottom: solid 1px gray;
+}
+
+.product-select-option li:hover{
+    background-color: #d6d6d6;
+}
+
+/* 필터 바 */
+.filter-bar{
+    box-sizing: border-box;
+    width: calc(100% - 210px);
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.filter-bar .filter-btn{
+    display: flex;
+    gap: 8px;
+    height: 40px;
+    align-items: flex-end;
+    border-bottom: solid 1px grey;
+}
+
+.filter-bar .filter-btn span{
+    font-weight: 700;
+    background-image: url(./imgs/icons/icon-gnb-search.png);
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+}
+
+.filter-bar .filter-btn input{
+    all: unset;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.filter-bar .filter-btn input::placeholder{
+    font-size: 14px;
+}
+
+.filter-bar .filter-select-box{
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.filter-bar .filter-select-box button{
+    all: unset;
+}
+
+.filter-bar .filter-option{
+    font-size: 14px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+.filter-bar .filter-option button{
+    height: fit-content;
+}
+.filter-bar .filter-option button:not(:nth-child(1)){
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #e5e5e5;
+}
+
+.filter-bar .filter-icons{
+    display: flex;
+    gap: 10px;
+}
+
+.filter-bar .filter-icons .small-mode,
+.filter-bar .filter-icons .big-mode{
+    width: 25px;
+    height: 25px;
+}
+.filter-bar .filter-icons .small-mode button,
+.filter-bar .filter-select-box .big-mode button{
+    width: 100%;
+    height: 100%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.filter-bar .filter-icons .small-mode.active button{
+    background-image: url(./imgs/icons/icon-input-line-small-active.png);
+}
+.filter-bar .filter-icons .small-mode button{
+    background-image: url(./imgs/icons/icon-input-line-small.png);
+}
+
+.filter-bar .filter-select-box .big-mode.active button{
+    background-image: url(./imgs/icons/icon-input-line-full-active.png);
+}
+.filter-bar .filter-select-box .big-mode button{
+    background-image: url(./imgs/icons/icon-input-line-full.png);
+}
+
+/* 상품 컨테이너 */
+.product-box{
+    display: flex;
+    gap: 50px;
+}
+
+/* 왼쪽 네비게이션 메뉴 */
+.product-box .product-nav{
+    min-width: 210px;
+    padding: 16px 0 0;
+}
+
+.data-box button{
+    all: unset;
+    display: block;
+    width: 100%;
+}
+.data-box button.active,
+.data-box button:hover{
+    font-weight: bold;
+}
+/* content: "\e145"; : 플러스 일때 */
+/* content: "\e15b"; : 마이너스 일때 */
+
+.product-nav .data-box .plus > button::after{
+    float: right;
+    content: "\e145";
+    font-family: "Material Symbols Outlined";
+}
+
+.product-nav .data-box .plus > button.expand::after{
+    content: "\e15b";
+}
+
+
+.product-nav .data-box .main-list{
+    position: relative;
+    font-size: 16px;
+    margin-top: 16px;
+}
+.product-nav .data-box .sub-list{
+    position: relative;
+    font-size: 16px;
+    margin-left: 12px;
+    margin-top: 16px;
+}
+.product-nav .data-box .plus-list:nth-of-type(1){
+    margin-top: 16px;
+}
+.product-nav .data-box .plus-list{
+    font-size: 14px;
+    margin-left: 16px;
+    margin-top: 8px;
+    display: none;
+    transition: 1s;
+}
+.product-nav .data-box .plus-list.on{
+    display: block;
+}
+.product-nav .data-box .plus-list button{
+    margin-top: 8px;
+}
+
+.product-box .item-box{
+    box-sizing: border-box;
+    display: flex;
+    column-gap: 16px;
+    margin-left: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 210px);
+    transition: 2s;
+}
+
+.product-box .item-box .product-item{
+    box-sizing: border-box;
+    padding-top: 0;
+    margin-bottom: 2%;
+    transition: .4s;
+}
+
+.product-box .item-box .product-item.small-size{
+    width: calc((100% - (16px * 3)) / 4);
+}
+.product-box .item-box .product-item.middle-size{
+    width: calc((100% - 16px) / 2);
+}
+.product-box .item-box .product-item.full-size{
+    width: 100%;
+}
+
+.product-box .item-box .img-box{
+    box-sizing: border-box;
+    width: 100%;
+    height: 80%;
+    min-height: 200px;
+}
+.product-box .item-box .text-box{
+    color: #333;
+    padding-top: 2%;
+    width: 100%;
+    height: 20%;
+}
+
+.product-box .item-box .text-box p{
+    font-weight: 700;
+}
+
+.product-box .item-box .text-box div{
+    margin-top: 5px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-box .item-box .text-box span{
+    margin-bottom: 1px;
+}

@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+ul, li{
+    list-style: none;
+}
+ul{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.select-box{
+    border: solid 1px red;
+}
+
+.main-list{
+    border: solid 1px blue;
+    padding: 10px;
+}
+
+.sub-list{
+    border: solid 1px red;
+    padding: 10px;
+}
+
+.plus-list{
+    border: solid 1px green;
+    padding: 10px;
+}
+

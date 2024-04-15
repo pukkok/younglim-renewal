@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const selectItems = ['키친/붙박이장', '바스/타일', '도어', '중문', '창호', '몰딩/월/마루', '인테리어필름']
+        const selectENGItems = ['kitchen/builtIn', 'bath/tile', 'door', 'partition', 'window', 'molding', 'interiorFilm']
+
+        const root = document.getElementById('root')
+
+        const ul = document.createElement('ul')
+        ul.className='select-box'
+        selectItems.forEach(item => {
+            const li = document.createElement('li')
+            li.innerText = item
+            ul.append(li)
+        })
+
+        const listBox = document.createElement('div')
+        listBox.className = 'list-box'
+        /** 제이슨 불러오기 */
+        function loadJson (key) {
+            return fetch("./category.json")
+            .then(response => response.json())
+            .then(data => data[key])
+        }
+        /** 배열, 클래스, 어펜딩태그*/
+        function appendingArrayList (arr, cName, appendTag){
+            arr.forEach(list => {
+                const div = document.createElement('div')
+                div.className = cName
+                div.innerText = list
+                appendTag.append(div)
+            })
+            return appendTag
+        }
+
+        loadJson('kitchen')
+        .then(data => {
+            let a = appendingArrayList(data.main, 'main-list', listBox)
+        })
+
+
+        function makeList (data, appendTag) {
+            const dataBox = document.createElement('div')
+            dataBox.className = 'data-box' 
+
+            data.main.forEach(mainData=> {
+                /** 메인 리스트 만들기*/
+                const mainList = document.createElement('div')
+                mainList.className = 'main-list' 
+                mainList.innerText = mainData
+                dataBox.append(mainList)
+
+                if(data.list){
+                    /** 서브 리스트 만들기 */
+                    data.list.forEach(listData => {
+                        const subList = document.createElement('div')
+                        subList.className="sub-list"
+                        subList.innerText = listData
+                        dataBox.append(subList)
+    
+                        if(listData in data){
+                            appendingArrayList(data[listData], 'plus-list', dataBox)
+                        }
+                    })
+                }
+
+                if(mainData in data){
+                    appendingArrayList(data[mainData], 'plus-list', dataBox)
+                }
+
+            })
+            appendTag.append(dataBox)
+        }
+
+        root.append(ul, listBox)
+
+        function changeList (e) {
+            selectItems.forEach((item, i) => {
+                if(e.target.innerText===item){
+                    let splitItems = selectENGItems[i].split('/')
+                    console.log(splitItems)
+                    splitItems.forEach(item=>{
+                        listBox.innerHTML=''
+                        loadJson(item)
+                        .then(data => {
+                            // console.log(data)
+                            makeList(data, listBox)
+                        })
+
+                    })
+                }
+
+            })
+        }
+
+        ul.addEventListener('click', changeList)
+
+    </script>
+</body>
+</html>
+
+<!-- {"type" : "kitchen", "ul" : ["키친 전체보기"], "list" : ["타임리스 키친", "에센셜 키친", "키친 구성기기", "키친 상판/하드웨어"]},
+    {"type" : "builtIn", "ul" : ["붙박이장 전체보기"], "list" : ["여닫이 붙박이장", "슬라이딩 붙박이장", "드레스룸", "현관장", "모듈수납장"]},
+    {"type" : "bath", "ul" : ["바스 전체보기"], "list" : ["타임리스 바스", "에센셜 바스", "바스 구성기기"]},
+    {"type" : "tile", "ul" : ["타일"], "타일" : ["포세린", "세라믹"]},
+    {"type" : "door", "ul" : ["아펠도어", "ABS도어", "멤브레인 도어", "타공도어", "키즈도어", "기능성도어","하드웨어","도어 시스템", "도어 프레임"]},
+    {"type" : "partition", "ul" : ["3연동 중문", "양개 중문", "슬림 알루미늄 중문", "기타 중문", "폴딩도어", "파티션", "유리옵션", "중문시스템", "중문프레임"]},
+    {"type" : "window", "ul" : ["창호 전체보기"], "list" : ["발코니창", "베이직창", "시스템창", "입면분할창", "프로젝트창", "학교창", "하드웨어"], 
+        "하드웨어":["핸들", "크리센트", "기타하드웨어"]},
+    {"type" : "molding", "ul" : ["몰딩", "스타일월", "월판넬", "벽장식", "마루"],
+        "몰딩" : ["래핑몰딩", "PVC몰딩&렉스판", "클래식 도장몰딩", "데코몰딩"],
+        "벽장식" : ["아트월", "벽선반"],
+        "마루" : ["원목마루", "강마루"]},
+    {"type" : "interiorFilm", "ul" : ["인테리어필름&시트"]} -->

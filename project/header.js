@@ -105,7 +105,7 @@ depth3.className = 'depth3'
 async function makeDepth3 (code) {
     const ul = document.createElement('ul')
     ul.className = code
-    await loadJson(`${origin}/project/category.json`)
+    await loadJson(`./project/category.json`)
     .then(data => data[code])
     .then(data => {
         if(data.inform) appendList('main', data.inform, ul)

@@ -1,9 +1,9 @@
 /**매거진 파트 */
 
 const magazines = [
-    {img : `${origin}/project/imgs/magazine/magazine01.jpg`, main : "TV CF 속 그공간, 그 제품", sub : "2021 영림의 다양한 신제품들을 담은 현장 속 인테리어 살펴보기"},
-    {img : `${origin}/project/imgs/magazine/magazine02.jpg`, main : "새로운 꿈을 꾸며 내일을 설계하는 집", sub : "눈이 펑펑 오던 어느 겨울, 고요하게 눈이 쌓인 전원주택 마을을 방문했다"},
-    {img : `${origin}/project/imgs/magazine/magazine03.jpg`, main : "2021 영림 TV CF 광고 촬영 비하인드", sub : "토탈인테리어 브랜드 '영림'의 첫 TV CF 촬영 비하인드 스토리, 지금 공개합니다."},
+    {img : `./project/imgs/magazine/magazine01.jpg`, main : "TV CF 속 그공간, 그 제품", sub : "2021 영림의 다양한 신제품들을 담은 현장 속 인테리어 살펴보기"},
+    {img : `./project/imgs/magazine/magazine02.jpg`, main : "새로운 꿈을 꾸며 내일을 설계하는 집", sub : "눈이 펑펑 오던 어느 겨울, 고요하게 눈이 쌓인 전원주택 마을을 방문했다"},
+    {img : `./project/imgs/magazine/magazine03.jpg`, main : "2021 영림 TV CF 광고 촬영 비하인드", sub : "토탈인테리어 브랜드 '영림'의 첫 TV CF 촬영 비하인드 스토리, 지금 공개합니다."},
 ]
 
 const magazine = document.createElement('section')

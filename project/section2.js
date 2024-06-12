@@ -47,7 +47,7 @@ s2products.forEach((product) => {
   const imgBox = document.createElement('div')
   imgBox.className = 'img-box'
   const img = document.createElement('img')
-  img.src = `${origin}/project/imgs/section2/${product.img}`
+  img.src = `./project/imgs/section2/${product.img}`
   imgBox.append(img)
   const h2 = document.createElement('h2')
   h2.innerText = product.name

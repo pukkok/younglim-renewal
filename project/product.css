@@ -181,6 +181,7 @@
     all: unset;
     display: block;
     width: 100%;
+    cursor: pointer;
 }
 .data-box button.active,
 .data-box button:hover{

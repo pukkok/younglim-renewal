@@ -132,7 +132,7 @@ function makeImgBox(part1, part2, name='', concepts=[], cName = 'middle-size'){
     const imgBox = document.createElement('div')
     imgBox.className = 'img-box'
     const img = document.createElement('img')
-    img.src = `./imgs/product/${part1}/${part2}.jpg`
+    img.src = `${origin}/project/imgs/product/${part1}/${part2}.jpg`
     const textBox = document.createElement('div')
     textBox.className = 'text-box'
     const p = document.createElement('p')
@@ -247,7 +247,7 @@ window.addEventListener('click', clickEvent)
 //프로덕트 네비게이션 불러오기
 async function loadProductNav (category){
     let keys
-    let data = await loadJson("./category.json")
+    let data = await loadJson(`${origin}/project/category.json`)
     category === '몰딩/월/마루' ? keys = [category] : keys = category.split('/')
     productNav.innerHTML=''
     keys.forEach( key => {
@@ -272,7 +272,7 @@ async function loadProductImg (part = 'kitchen', content = '키친 전체보기'
     let code = findCode(content)
     let cName = findSmallSize(code)
 
-    let data = await loadJson('./product.json')
+    let data = await loadJson(`${origin}/project/product.json`)
 
     if(content.includes('전체보기')){
         data[part].forEach(data => {

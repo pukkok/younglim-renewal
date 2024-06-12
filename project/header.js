@@ -105,7 +105,7 @@ depth3.className = 'depth3'
 async function makeDepth3 (code) {
     const ul = document.createElement('ul')
     ul.className = code
-    await loadJson("./category.json")
+    await loadJson(`${origin}/project/category.json`)
     .then(data => data[code])
     .then(data => {
         if(data.inform) appendList('main', data.inform, ul)
@@ -221,6 +221,7 @@ function clickDepth3(e){
 
       window.location.href = `${absoluteLocation}/product.html?category=${category}&part=${part}&content=${content}`
     }
+    console.log(absoluteLocation)
   })
 
 }

@@ -33,7 +33,7 @@ for(let i=0; i<3; i++){
     const imgBox = document.createElement('div')
     imgBox.className = 'img-box'
     const img = document.createElement('img')
-    img.src = `./imgs/designer-pick/${imgs.BT[i]}.jpg`
+    img.src = `${origin}/imgs/designer-pick/${imgs.BT[i]}.jpg`
     imgBox.append(img)
     dImgContainer.append(imgBox)
 }

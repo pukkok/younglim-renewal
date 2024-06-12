@@ -22,7 +22,7 @@ const makeSection1 = (obj, i) => {
     container.className = 'container'
     const div1 = document.createElement('div')
     div1.className = 'bg'
-    div1.style.backgroundImage = `linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(./imgs/bg_${i+1}_main.jpg)`
+    div1.style.backgroundImage = `linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(${origin}/project/imgs/bg_${i+1}_main.jpg)`
     const div2 = document.createElement('div')
     div2.className = 'text-box'
     const h1 = document.createElement('h1')

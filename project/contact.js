@@ -35,10 +35,10 @@ contents.forEach((content, i) => {
     
         if(i>3){
             div.classList.add('big')
-            img.src = `./imgs/contact/main-img-banner-0${i-3}.jpg`
+            img.src = `${origin}/project/imgs/contact/main-img-banner-0${i-3}.jpg`
         }else{
             div.classList.add('small')
-            img.src = `./imgs/contact/younglim_cs_illust-0${i}.png`
+            img.src = `${origin}/project/imgs/contact/younglim_cs_illust-0${i}.png`
         }
 
         imgBox.append(img)

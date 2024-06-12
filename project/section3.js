@@ -32,7 +32,7 @@ h1.innerText = 'Modern'
 const box1 = document.createElement('div')
 box1.className = 'content-box box1'
 const img1 = document.createElement('img')
-img1.src='./imgs/section3/main-2-img-modern-3.jpg'
+img1.src=`${origin}/project/imgs/section3/main-2-img-modern-3.jpg`
 const textBox = document.createElement('div')
 textBox.className = 'text-box'
 const s3H2 = document.createElement('h2')
@@ -46,13 +46,13 @@ box1.append(img1, textBox)
 const box2 = document.createElement('div')
 box2.className = 'content-box box2'
 const img2 = document.createElement('img')
-img2.src='./imgs/section3/main-2-img-modern-2.jpg'
+img2.src=`${origin}/project/imgs/section3/main-2-img-modern-2.jpg`
 box2.append(img2)
 
 const box3 = document.createElement('div')
 box3.className = 'content-box box3'
 const img3 = document.createElement('img')
-img3.src='./imgs/section3/main-2-img-modern-1.jpg'
+img3.src=`${origin}/project/imgs/section3/main-2-img-modern-1.jpg`
 box3.append(img3)
 
 specialBox.append(h1)
@@ -79,9 +79,9 @@ const changeType = (e) => {
                 s3H4.innerText = type.comment
 
                 setTimeout(() => {
-                    img1.src=`./imgs/section3/main-2-img-${type.style}-3.jpg`
-                    img2.src=`./imgs/section3/main-2-img-${type.style}-2.jpg`
-                    img3.src=`./imgs/section3/main-2-img-${type.style}-1.jpg`
+                    img1.src=`${origin}/project/imgs/section3/main-2-img-${type.style}-3.jpg`
+                    img2.src=`${origin}/project/imgs/section3/main-2-img-${type.style}-2.jpg`
+                    img3.src=`${origin}/project/imgs/section3/main-2-img-${type.style}-1.jpg`
                 }, 300)
                 setTimeout(() => {
                     imgBox.classList.remove('effect')

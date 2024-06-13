@@ -79,9 +79,9 @@ const changeType = (e) => {
                 s3H4.innerText = type.comment
 
                 setTimeout(() => {
-                    img1.src=`./project/imgs/section3/main-2-img-${type.style}-3.jpg`
-                    img2.src=`./project/imgs/section3/main-2-img-${type.style}-2.jpg`
-                    img3.src=`./project/imgs/section3/main-2-img-${type.style}-1.jpg`
+                    img1.src=`./project/imgs/section3/main-2-img-${type.style.toLowerCase()}-3.jpg`
+                    img2.src=`./project/imgs/section3/main-2-img-${type.style.toLowerCase()}-2.jpg`
+                    img3.src=`./project/imgs/section3/main-2-img-${type.style.toLowerCase()}-1.jpg`
                 }, 300)
                 setTimeout(() => {
                     imgBox.classList.remove('effect')

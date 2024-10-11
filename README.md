@@ -1,9 +1,9 @@
 # YOUNGLIM-renewal
 
-리뉴얼 페이지 : https://pukkok.github.io/younglim-renewal
-<p>* 메인페이지와 서브페이지( 제품 -> 키친/붙박이장 -> [상품목록] )까지 구현되어 있습니다.</p>
-<br>
-영림 페이지 : https://www.yl.co.kr/index
+[[리뉴얼 페이지](https://pukkok.github.io/younglim-renewal)]
+[[영림 페이지](https://www.yl.co.kr/index)]
+
+<p><b>* 메인페이지와 서브페이지( 제품 -> 키친/붙박이장 -> [상품목록] )까지 구현되어 있습니다.</b></p>
 
 <br><br>
 ## 0. 제작 기간
